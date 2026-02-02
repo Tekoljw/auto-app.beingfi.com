@@ -1,0 +1,35 @@
+MODEL: "Qwen"  # The type of multi-modal LLM you would like to use to power the AppAgent, must be either OpenAI, Qwen, or DeepSeek
+
+OPENAI_API_BASE: "https://api.openai.com/v1/chat/completions"
+OPENAI_API_KEY: "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"  # Set the value to sk-xxx if you host the openai interface for open llm model
+OPENAI_API_MODEL: "gpt-5.1"  # The only OpenAI model by now that accepts visual input
+MAX_TOKENS: 300  # The max token limit for the response completion
+TEMPERATURE: 0.0  # The temperature of the model: the lower the value, the more consistent the output of the model
+REQUEST_INTERVAL: 10  # Time in seconds between consecutive GPT-4V requests
+
+DASHSCOPE_API_KEY: "sk-5ea38f5b2430404abe800c0ff0570cb9"  # The dashscope API key that gives you access to Qwen-VL model
+QWEN_MODEL: "qwen-vl-max"
+
+DEEPSEEK_API_BASE: "https://api.deepseek.com/v1/chat/completions"  # DeepSeek API endpoint
+DEEPSEEK_API_KEY: "sk-fbb09605b41444c2b87b8b05f8d8ee3c"  # Set your DeepSeek API key here
+DEEPSEEK_API_MODEL: "deepseek-reasoner"  # DeepSeek model name. deepseek-v3 支持视觉输入。如果遇到错误，也可以尝试 "deepseek-chat" 或其他可用模型
+
+ANDROID_SCREENSHOT_DIR: "/sdcard"  # Set the directory on your Android device to store the intermediate screenshots. Make sure the directory EXISTS on your phone!
+ANDROID_XML_DIR: "/sdcard"  # Set the directory on your Android device to store the intermediate XML files used for determining locations of UI elements on your screen. Make sure the directory EXISTS on your phone!
+
+DOC_REFINE: false  # Set this to true will make the agent refine existing documentation based on the latest demonstration; otherwise, the agent will not regenerate a new documentation for elements with the same resource ID.
+MAX_ROUNDS: 20  # Set the round limit for the agent to complete the task
+DARK_MODE: false  # Set this to true if your app is in dark mode to enhance the element labeling
+MIN_DIST: 30  # The minimum distance between elements to prevent overlapping during the labeling process
+
+# 云手机API配置 (Cloud Phone API Configuration)
+DEVICE_MODE: "vmos"  # 设备连接模式: "adb" (本地ADB连接), "cloud" (通用云手机API) 或 "vmos" (VMOS Cloud)
+CLOUD_PHONE_API_BASE: "https://api.cloudphone.com/v1"  # 云手机API基础URL（通用云手机模式使用）
+CLOUD_PHONE_API_KEY: ""  # 云手机API密钥（通用云手机模式使用）
+CLOUD_PHONE_DEVICE_ID: "ACP250702S7CZW8M"  # 云手机设备ID（通用云手机模式使用）
+
+# VMOS Cloud 配置 (VMOS Cloud Configuration)
+VMOS_API_HOST: "https://api.vmoscloud.com"  # VMOS Cloud API主机地址
+VMOS_ACCESS_KEY_ID: "Ql1XXeUqNBQZjq4Yek6sTgSqyWWenqiT"  # VMOS Cloud Access Key ID
+VMOS_SECRET_ACCESS_KEY: "X5kIJuEutdKHOTrEC5LR0bYI"  # VMOS Cloud Secret Access Key
+VMOS_DEVICE_ID: "ACP250702S7CZW8M"  # VMOS Cloud 设备ID (padCode)，留空则运行时选择
