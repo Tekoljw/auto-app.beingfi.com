@@ -1,0 +1,57 @@
+{
+  "channelid": 6001,
+  "channel_type": 1,
+  "description": "6001 付款通道（建行个人网银）。登录与查看收款一致；登录后先点「转账汇款」再点「转账」进入填写转账信息页，具体表单由 tw_paytype_config.payment_params 配置。",
+  "steps": [
+    {
+      "id": "step_login_username",
+      "type": "fill",
+      "position": 0,
+      "selector": "input[name=\"username\"], input[name=\"USERID\"], input[placeholder*=\"用户名\"], input[placeholder*=\"账号\"]",
+      "value": "{{username}}",
+      "optional": false,
+      "weight": 8
+    },
+    {
+      "id": "step_login_password",
+      "type": "fill",
+      "position": 1,
+      "selector": "input[name=\"password\"], input[name=\"LOGINPWD\"], input[type=\"password\"]",
+      "value": "{{password}}",
+      "optional": false,
+      "weight": 8
+    },
+    {
+      "id": "step_login_submit",
+      "type": "click",
+      "position": 2,
+      "selector": "input[value=\"登录\"], button:has-text(\"登录\"), a:has-text(\"安全登录\"), a:has-text(\"登录\"), input[type=\"submit\"]",
+      "optional": false,
+      "weight": 8
+    },
+    {
+      "id": "step_menu_transfer_remit",
+      "type": "click",
+      "position": 3,
+      "selector": "a[alpval=\"ZZHK\"][href=\"#\"], a[alpval=\"ZZHK\"]",
+      "optional": false,
+      "weight": 8
+    },
+    {
+      "id": "step_menu_transfer",
+      "type": "click",
+      "position": 4,
+      "selector": "li[title=\"转账\"], #MENUV6030104",
+      "optional": false,
+      "weight": 8
+    },
+    {
+      "id": "step_execute_payment",
+      "type": "executePayment",
+      "position": 5,
+      "optional": false,
+      "weight": 8
+    }
+  ],
+  "receipt_parse": []
+}

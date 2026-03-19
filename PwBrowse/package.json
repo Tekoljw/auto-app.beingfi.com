@@ -1,0 +1,25 @@
+{
+  "name": "pw-browse",
+  "version": "1.0.0",
+  "description": "Playwright + Browserbase for K BIZ automation",
+  "main": "run.js",
+  "scripts": {
+    "start": "node run.js",
+    "view-receipts": "node run.js '{\"action\":\"viewReceipts\"}'",
+    "execute-payment": "node run.js '{\"action\":\"executePayment\",\"amount\":\"100\",\"payee\":\"\",\"memo\":\"\"}'"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "node-fetch": "^2.7.0",
+    "playwright-core": "1.36.0",
+    "@browserbasehq/sdk": "^1.0.0",
+    "tesseract.js": "^5.0.0"
+  },
+  "overrides": {
+    "playwright-core": "1.36.0",
+    "puppeteer-core": "21.6.0"
+  },
+  "engines": {
+    "node": ">=16.14.2"
+  }
+}

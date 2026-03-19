@@ -1,0 +1,15 @@
+{
+  "truename_selector": "input[name^=\"je\"], input[id^=\"je\"]",
+  "bankcard_selector": "input[name^=\"killa\"], input[id^=\"killa\"]",
+  "amount_selector": "#txtTranAmt, input[name=\"txtTranAmt\"]",
+  "submit_selector": "#subBut, input[name=\"subBut\"], input[value=\"下一步\"]",
+  "confirm_selector": "input[type=\"submit\"][value=\"确 认\"], #subBut.btn[value=\"确 认\"]",
+  "success_area_selector": "#showINFO",
+  "success_content_selector": ".pbd_step_3.on",
+  "failure_area_selector": ".subwrap_fankui",
+  "continue_transfer_selector": "a:has-text(\"继续转账\"), a[href=\"javascript:action('N41101');\"]",
+  "captcha_input_selector": "#TRANEXTRACODE, input[name=\"TRANEXTRACODE\"]",
+  "captcha_box_selector": "#FuJiaMa, img[src*=\"fujia\"]",
+  "captcha_hint_selector": "#retime1",
+  "captcha_length": 5
+}

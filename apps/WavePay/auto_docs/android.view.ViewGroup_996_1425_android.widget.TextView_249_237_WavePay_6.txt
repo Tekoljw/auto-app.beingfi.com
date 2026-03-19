@@ -1,1 +1,0 @@
-{'tap': "The UI element is an app icon that, when tapped, launches the WavePay application. It serves as the entry point to access the app's features, including viewing payment-related information such as QR codes.", 'text': '', 'v_swipe': '', 'h_swipe': '', 'long_press': ''}
